@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: 'Inter-Regular';
+  }
+
+  /*** Fonts ***/
+  @font-face {
+    font-family: 'Inter-Regular';
+    font-style: normal;
+    src: local('Inter-Regular'),
+      url(assets/fonts/Inter/static/Inter-Regular.ttf) format('truetype');
+  }
+ 
+  @font-face {
+    font-family: 'Inter-Medium';
+    font-style: medium;
+    src: local('Inter-Medium'),
+      url(assets/fonts/Inter/static/Inter-Medium.ttf) format('truetype');
+  }
+}
