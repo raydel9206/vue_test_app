@@ -9,7 +9,7 @@ import ArrowDown from '@/assets/icons/ArrowDown.vue';
 
 </script>
 <template>
-    <div class="flex flex-row w-full relative py-[2%] gap-6 justify-between bg-white px-[15%] items-center">
+    <div class="flex flex-row w-full relative py-[2%] gap-6 justify-between bg-white md:px-[10%] lg:px-[15%] sm:px-[2%] items-center">
         <Brand />
         <div class="w-1/2 h-10 flex flex-row rounded-md border-2 justify-center border-primary items-center">
             <div class="w-[58%] h-10 flex flex-row relative items-center px-2">

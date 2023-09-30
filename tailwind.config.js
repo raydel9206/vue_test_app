@@ -6,26 +6,17 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      sm: '1024px',
+      md: '1366px',
+      lg: '1920px',
+      xl: '1440px',
     },
     colors: {
       'white': '#ffffff',
       'primary': '#0D6EFD',
       'slate-50': '#F7FAFC',
       zinc: {
+        '100': '#EEE',
         '200': '#dee2e7',
         '300': '#d9d9d9',
         '900': '#1C1C1C',
@@ -47,6 +38,21 @@ export default {
       },
       green:{
         '600': '#00B517'
+      },
+      orange:{
+        '100': '#FFF0DF'
+      },
+      red:{
+        '500': '#FA3434'
+      },
+      teal:{
+        '100': '#C6F3F1'
+      },
+      emerald:{
+        '400': '#4CA7A799'
+      },
+      blue:{
+        '900': '#005ADE'
       }
     },
     extend: {
