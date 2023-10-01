@@ -11,18 +11,18 @@ import ArrowDown from '@/assets/icons/ArrowDown.vue';
 <template>
     <div class="flex flex-row w-full relative py-[2%] gap-6 justify-between bg-white md:px-[10%] lg:px-[15%] sm:px-[2%] items-center">
         <Brand />
-        <div class="w-1/2 h-10 flex flex-row rounded-md border-2 justify-center border-primary items-center">
-            <div class="w-[58%] h-10 flex flex-row relative items-center px-2">
+        <div class="lg:w-[50%] md:w-[45%] sm:w-[45%] h-10 flex flex-row rounded-md border-2 justify-center border-primary items-center">
+            <div class="lg:w-[60%] md:w-[50%] sm:w-[45%] h-10 flex flex-row relative items-center px-2">
                 <div class="absolute text-gray-400 text-base font-normal">Search
                 </div>
             </div>
-            <div class="w-36 h-10 flex flex-row justify-end items-center border-l border-primary px-2">
+            <div class="md:w-[30%] lg:w-[20%] sm:w-[30%] h-10 flex flex-row justify-between items-center border-l border-primary px-2">
                 <div class="flex flex-row items-center text-zinc-900 text-base font-normal">
                     All category
                 </div>
                 <ArrowDown />
             </div>
-            <div class="w-[20%] h-full flex flex-row bg-primary justify-center">
+            <div class="lg:w-[20%] md:w-[20%] sm:w-[25%] h-full flex flex-row bg-primary justify-center">
                 <div class="flex flex-row justify-center items-center inline-flex">
                     <div class="text-center text-white text-base font-medium ">Search</div>
                 </div>

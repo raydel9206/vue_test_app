@@ -15,6 +15,7 @@ export default {
       'white': '#ffffff',
       'primary': '#0D6EFD',
       'slate-50': '#F7FAFC',
+      'black': '#00000040',
       zinc: {
         '100': '#EEE',
         '200': '#dee2e7',

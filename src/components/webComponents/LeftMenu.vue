@@ -3,6 +3,10 @@ import ArrowUp from '@/assets/icons/ArrowUp.vue';
 import Range from '@/assets/icons/Range.vue';
 import RadioBtnCheck from '@/assets/icons/RadioBtnCheck.vue';
 import RadioBtn from '@/assets/icons/RadioBtn.vue';
+import FiveStarts from '@/assets/icons/FiveStarts.vue';
+import RatingFour from '@/assets/icons/RatingFour.vue';
+import ThreeStarts from '@/assets/icons/ThreeStarts.vue';
+import TwoStarts from '@/assets/icons/TwoStarts.vue';
 
 const brands = ['Samsung', 'Apple', 'Huawei', 'Poco', 'Lenovo'];
 const category = ['Mobile accessory', 'Electronics', 'Smartphones', 'Modern tech'];
@@ -15,7 +19,6 @@ const conditions = [
 ];
 
 </script>
-
 <template>
     <div>
         <!-- Categories -->
@@ -137,17 +140,43 @@ const conditions = [
          <!-- Ratings -->
          <div>
             <div class="w-full h-12 flex flex-row justify-between inline-flex items-center border-t border-zinc-200">
-                <span class="text-zinc-900 font-semibold">Features</span>
+                <span class="text-zinc-900 font-semibold">Ratings</span>
                 <div class="relative flex-col justify-start items-start flex">
                     <ArrowUp />
                 </div>
             </div>
-            <div v-for="(feature, index) in features" :key="index" class="text-neutral-600">
+            <div class=" flex flex-col text-neutral-600">
                 <div class="w-full h-9 pr-2.5 py-2 justify-start items-center inline-flex gap-2">
                     <div class="w-6 h-6 relative">
                         <div class="w-full h-5 absolute rounded border-2 border-stone-300"></div>
                     </div>
-                    <div class="w-full">{{ feature }}</div>
+                    <div class="w-full">
+                        <FiveStarts/>
+                    </div>
+                </div>
+                <div class="w-full h-9 pr-2.5 py-2 justify-start items-center inline-flex gap-2">
+                    <div class="w-6 h-6 relative">
+                        <div class="w-full h-5 absolute rounded border-2 border-stone-300"></div>
+                    </div>
+                    <div class="w-full">
+                        <RatingFour/>
+                    </div>
+                </div>
+                <div class="w-full h-9 pr-2.5 py-2 justify-start items-center inline-flex gap-2">
+                    <div class="w-6 h-6 relative">
+                        <div class="w-full h-5 absolute rounded border-2 border-stone-300"></div>
+                    </div>
+                    <div class="w-full">
+                        <ThreeStarts/>
+                    </div>
+                </div>
+                <div class="w-full h-9 pr-2.5 py-2 justify-start items-center inline-flex gap-2">
+                    <div class="w-6 h-6 relative">
+                        <div class="w-full h-5 absolute rounded border-2 border-stone-300"></div>
+                    </div>
+                    <div class="w-full">
+                        <TwoStarts/>
+                    </div>
                 </div>
             </div>
             <div class="w-full h-9 pr-2.5 py-2 justify-start items-center inline-flex mb-4">

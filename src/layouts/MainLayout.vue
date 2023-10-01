@@ -1,12 +1,17 @@
 <script setup>
-import MainHeader from '@/components/webComponents/Header.vue';
-import MainMenu from '@/components/webComponents/MainMenu.vue';
+import MainHeaderWeb from '@/components/webComponents/Header.vue';
 import MainFooter from '@/components/webComponents/Footer.vue';
+
+import { useGlobalStore } from '@/store/global';
+const storeGlobal = useGlobalStore();
+
+
+
 </script>
 
+
 <template>
-    <MainHeader />
-    <MainMenu />
+    <MainHeaderWeb v-if="!storeGlobal.isScreemSm" />
     <div class="w-full bg-gray-90 flex flex-col inline-flex">
         <div>
             <main>
@@ -14,7 +19,7 @@ import MainFooter from '@/components/webComponents/Footer.vue';
             </main>
         </div>
     </div>
-    <div class="inset-x-0 bottom-0">
-        <MainFooter :subscrption="true"/>
+    <div v-if="!storeGlobal.isScreemSm" class="inset-x-0 bottom-0">
+        <MainFooter :subscrption="true" />
     </div>
 </template>

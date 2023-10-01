@@ -7,7 +7,7 @@ import Flag from '../../assets/icons/Flag.vue';
 </script>
 <template>
     <div
-        class="flex flex-row gap-6 inline-flex bg-white w-full items-center h-14 md:px-[10%] lg:px-[15%] sm:px-[2%] mb-8 border-y border-zinc-200 justify-between">
+        class="flex flex-row gap-6 inline-flex bg-white w-full items-center h-14 md:px-[10%] lg:px-[15%] sm:px-[2%] border-y border-zinc-200 justify-between">
         <div class="flex flex-row gap-6">
             <div class="flex flex-row gap-2">
                 <MenuBtn />
