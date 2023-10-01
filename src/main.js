@@ -5,7 +5,7 @@ import App from './App.vue'
 import '@/style.css';
 import Toast from 'vue-toastification';
 import 'vue-toastification/dist/index.css';
-import { Vue3Mq } from "vue3-mq";
+import Vue3Mq from "vue3-mq";
 
 const app = createApp(App);
 const pinia = createPinia()

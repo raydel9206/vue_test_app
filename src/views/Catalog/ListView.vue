@@ -36,6 +36,7 @@ const store = useProductsStore();
 const scTimer = ref(0);
 const scY = ref(0);
 
+// Computed properties
 const products = computed(() => {
     return store.products;
 });
@@ -44,13 +45,14 @@ const suggestions = computed(() => {
     return store.suggestions;
 });
 
-
+// Hook
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
     store.fetchSuggestions();
     store.fetchProducts();
 });
 
+// Functions
 const handleScroll = () => {
     if (scTimer.value) return;
     scTimer.value = setTimeout(() => {
@@ -68,13 +70,14 @@ const addFav = async (evt, change) => {
     const textMsg = !change ? 'Se añadió a favoritos' : 'Se eliminó de favoritos'
     await store.addFav(evt, !change);
     toast.success(textMsg);
-}
+};
 
+const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing'];
 
-
-const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
 </script>
 <template>
+
+    <!-- Web view -->
     <div v-if="!storeGlobal.isScreemSm">
         <MainMenuWeb />
         <div class="md:px-[10%] lg:px-[15%] sm:px-[2%] mb-8">
@@ -204,6 +207,8 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
             </div>
         </div>
     </div>
+
+    <!-- Movil view -->
     <div v-else class="w-full bg-gray-90 flex flex-col inline-flex">
         <MainHeaderMovil :backRoute="backRoute" :goBack="false" />
         <MainMenuMovil />

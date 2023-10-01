@@ -25,6 +25,7 @@ import Flag from '@/assets/icons/Flag.vue';
             </div>
         </div>
 
+        <!-- Traslate -->
         <div class="flex flex-row gap-1">
             <div class="flex flex-row">
                 <div class="text-zinc-900 text-base font-semibold ">English, USD</div>

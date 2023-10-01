@@ -77,6 +77,7 @@ export const useProductsStore = defineStore('products', {
                         'Content-Type': 'application/json'
                     }
                 });
+                console.log(data)
                 if (this.currentProd) this.currentProd.isFavorite = change
                 this.fetchProducts();
             }

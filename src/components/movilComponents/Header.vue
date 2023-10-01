@@ -3,6 +3,7 @@ import ArrowBackM from '@/assets/icons/ArrowBackM.vue';
 import UserM from '@/assets/icons/UserM.vue';
 import CartM from '@/assets/icons/CartM.vue';
 
+// Props
 const props = defineProps({
     backRoute: {
         type: Object,

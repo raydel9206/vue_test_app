@@ -11,6 +11,8 @@ import ArrowDown from '@/assets/icons/ArrowDown.vue';
 <template>
     <div class="flex flex-row w-full relative py-[2%] gap-6 justify-between bg-white md:px-[10%] lg:px-[15%] sm:px-[2%] items-center">
         <Brand />
+
+        <!-- Search component -->
         <div class="lg:w-[50%] md:w-[45%] sm:w-[45%] h-10 flex flex-row rounded-md border-2 justify-center border-primary items-center">
             <div class="lg:w-[60%] md:w-[50%] sm:w-[45%] h-10 flex flex-row relative items-center px-2">
                 <div class="absolute text-gray-400 text-base font-normal">Search
@@ -28,6 +30,8 @@ import ArrowDown from '@/assets/icons/ArrowDown.vue';
                 </div>
             </div>
         </div>
+
+        <!-- Btns -->
         <div class="flex flex-row gap-6 text-gray-400 text-xs font-normal">
             <div class="flex flex-col items-center justify-center gap-2 cursor-pointer">
                 <User />

@@ -17,6 +17,7 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
                 <div class="w-56 text-gray-400 text-base font-normal">Search</div>
             </div>
 
+            <!-- Btns overflox-x Accesories -->
             <div class="w-full h-full py-4 flex flex-row gap-2 overflow-x-auto">
                 <div class="w-1/4 h-9 bg-gray-100 rounded-md flex items-center justify-center p-4">
                     <div class="text-center text-primary text-base font-normal">Tablets</div>
@@ -44,6 +45,8 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
                 </div>
             </div>
         </div>
+        
+        <!-- Filters -->
         <div class="flex flex-row w-full border-b border-zinc-200 rounded py-2 px-4 gap-2 bg-white">
             <div class="w-[40%] h-9 p-2 flex items-center justify-between bg-white rounded-md border border-zinc-200 ">
                 <div class="w-full justify-between items-center inline-flex">

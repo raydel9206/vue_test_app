@@ -20,6 +20,8 @@ const props = defineProps({
 
 <template>
     <div class="relative inset-x-0 bottom-0">
+        
+        <!-- Subscribe -->
         <div v-if="subscrption" class="w-full h-48 bg-gray-100 items-center flex flex-col justify-center gap-4">
             <div class="text-center text-zinc-900 text-xl font-semibold">Subscribe on our newsletter
             </div>
@@ -38,6 +40,8 @@ const props = defineProps({
                 </div>
             </div>
         </div>
+
+        <!-- Links -->
         <div class="bg-white h-80 md:px-[10%] lg:px-[15%] sm:px-[2%] items-center flex flex-row justify-between">
             <div class="grid gap-y-2 w-3/12">
                 <Brand />

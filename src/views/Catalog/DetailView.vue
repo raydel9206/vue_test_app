@@ -41,6 +41,7 @@ const scTimer = ref(0);
 const scY = ref(0);
 
 
+// Computed properties
 const suggestions = computed(() => {
     return store.suggestions;
 });
@@ -53,6 +54,8 @@ const currentProd = computed(() => {
     return store.currentProd;
 });
 
+
+// Functions
 const addFav = async (evt, change) => {
     await store.addFav(evt, !change);
     const textMsg = !change ? 'Se añadió a favoritos' : 'Se eliminó de favoritos'
@@ -72,6 +75,7 @@ const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+// Hooks
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
     store.fetchSuggestions();
@@ -81,6 +85,7 @@ onMounted(() => {
 
 </script>
 <template>
+    <!-- Web view -->
     <div v-if="!storeGlobal.isScreemSm" class="md:px-[10%] lg:px-[15%] sm:px-[2%] mb-8 w-full">
         <BreadCrumbs :crumbs="crumbs" />
         <div class="flex flex-col gap-4">
@@ -414,6 +419,7 @@ onMounted(() => {
             </div>
         </div>
     </div>
+    <!-- Movil view -->
     <div v-else>
         <MainHeaderMovil :backRoute="backRoute.value" :goBack="true" />
         <div class="w-full flex flex-col bg-white">
