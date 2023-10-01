@@ -1,8 +1,8 @@
 
 <script setup>
-import MenuBtn from '../../assets/icons/MenuBtn.vue';
-import ArrowDown from '../../assets/icons/ArrowDown.vue';
-import Flag from '../../assets/icons/Flag.vue';
+import MenuBtn from '@/assets/icons/MenuBtn.vue';
+import ArrowDown from '@/assets/icons/ArrowDown.vue';
+import Flag from '@/assets/icons/Flag.vue';
 
 </script>
 <template>

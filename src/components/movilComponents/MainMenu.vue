@@ -31,13 +31,13 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
                     <div class="text-center text-primary text-base font-normal">Ipod</div>
                 </div>
                 <div class="w-1/4 h-9 bg-gray-100 rounded-md flex items-center justify-center p-4">
-                    <div class="text-center text-primary text-base font-normal">Ipod</div>
+                    <div class="text-center text-primary text-base font-normal">Gadgets</div>
                 </div>
                 <div class="w-1/4 h-9 bg-gray-100 rounded-md flex items-center justify-center p-4">
-                    <div class="text-center text-primary text-base font-normal">Ipod</div>
+                    <div class="text-center text-primary text-base font-normal">Watch</div>
                 </div>
                 <div class="w-1/4 h-9 bg-gray-100 rounded-md flex items-center justify-center p-4">
-                    <div class="text-center text-primary text-base font-normal">Ipod</div>
+                    <div class="text-center text-primary text-base font-normal">Cameras</div>
                 </div>
                 <div class="w-1/4 h-9 bg-gray-100 rounded-md flex items-center justify-center p-4">
                     <div class="text-center text-primary text-base font-normal">Ipod</div>
@@ -45,7 +45,7 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
             </div>
         </div>
         <div class="flex flex-row w-full border-b border-zinc-200 rounded py-2 px-4 gap-2 bg-white">
-            <div class="w-[40%] h-7 p-2 flex items-center justify-between bg-white rounded-md border border-zinc-200 ">
+            <div class="w-[40%] h-9 p-2 flex items-center justify-between bg-white rounded-md border border-zinc-200 ">
                 <div class="w-full justify-between items-center inline-flex">
                     <div class="w-[80%] text-zinc-900 text-xs font-semibold">Sort: Newest</div>
                     <div class="w-[20%] relative flex-col justify-start items-start inline-flex">
@@ -53,7 +53,7 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
                     </div>
                 </div>
             </div>
-            <div class="w-[40%] h-7 p-2 flex items-center justify-between bg-white rounded-md border border-zinc-200 ">
+            <div class="w-[40%] h-9 p-2 flex items-center justify-between bg-white rounded-md border border-zinc-200 ">
                 <div class="w-full justify-between items-center inline-flex">
                     <div class="w-[80%] text-zinc-900 text-xs font-semibold">Filter (3)</div>
                     <div class="w-[20%] relative flex-col justify-start items-start inline-flex">
@@ -61,9 +61,9 @@ import IconViewList from '@/assets/icons/IconViewList.vue';
                     </div>
                 </div>
             </div>
-            <div class="h-7 flex flex-row" >
-                <IconView class="w-full h-7"/>
-                <IconViewList class="w-full h-7"/>
+            <div class="h-9 flex flex-row" >
+                <IconView class="w-full h-9"/>
+                <IconViewList class="w-full h-9"/>
             </div>
         </div>
     </div>

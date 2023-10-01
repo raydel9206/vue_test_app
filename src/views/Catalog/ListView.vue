@@ -86,8 +86,8 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
                 <div class="w-[80%] flex flex-col gap-2.5">
                     <div class="w-ful h-16 ml-12 flex flex-row bg-white rounded-md border border-zinc-200 justify-between">
                         <div class="w-2/5  flex flex-row items-center px-[1.5%]">
-                            <span class="text-zinc-900 text-base font-normal">12,911 items in</span>
-                            <span class="text-zinc-900 text-base font-semibold">Mobile accessory</span>
+                            <div class="text-zinc-900 text-base font-normal">12,911 items in</div>
+                            <div class="text-zinc-900 text-base font-semibold ml-1">Mobile accessory</div>
                         </div>
                         <div class="w-3/5 justify-end pr-4 items-center inline-flex gap-4">
                             <div class="w-[40%] flex flex-row items-center justify-end">
@@ -209,9 +209,9 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
         <MainMenuMovil />
         <div v-if="products.length > 0" class="w-full flex flex-col gap-2.5 px-4 py-4">
             <div v-for="(prod, index) in products" :key="index"
+                @click="$router.push({ name: 'product_detail', params: { id: prod.id } })"
                 class="flex flex-row bg-white h-40 rounded-md shadow-sm border border-zinc-200 gap-4 px-2">
-                <div @click="$router.push({ name: 'product_detail', params: { id: prod.id } })"
-                    class="w-[30%] cursor-pointer bg-white justify-center items-center inline-flex rounded-md ">
+                <div class="w-[30%] cursor-pointer bg-white justify-center items-center inline-flex rounded-md ">
                     <img class="w-full h-28" :src=prod.img />
                 </div>
                 <div class="w-[70%] flex flex-col lg:gap-4 md:gap-2 sm:gap-2 justify-center gap-1">
@@ -239,7 +239,7 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
             <div class="text-gray-400 text-base font-normal">No hay productos para mostrar</div>
         </div>
         <div class="w-full flex flex-col px-4 mb-4 gap-4">
-            <div class="text-zinc-900 text-base font-semibold">You may like</div>
+            <div v-if="products.length > 0" class="text-zinc-900 text-base font-semibold">You may like</div>
             <div class="w-full flex gap-4 mb-4 overflow-x-auto">
                 <div v-for="(item, index) in suggestions" :key="index"
                     class="bg-white rounded-md shadow-sm border border-zinc-200 px-2 mb-4">
@@ -255,8 +255,9 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
                 </div>
             </div>
         </div>
-        <div class="fixed right-8 bottom-8 bg-black backdrop-opacity-90 rounded-3xl" v-show="scY > 300" @click="scrollToTop">
-            <ScrollToTop/>
+        <div class="fixed right-8 bottom-8 bg-black backdrop-opacity-90 rounded-3xl" v-show="scY > 100"
+            @click="scrollToTop">
+            <ScrollToTop />
         </div>
     </div>
 </template>

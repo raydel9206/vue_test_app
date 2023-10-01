@@ -4,9 +4,6 @@ import MainFooter from '@/components/webComponents/Footer.vue';
 
 import { useGlobalStore } from '@/store/global';
 const storeGlobal = useGlobalStore();
-
-
-
 </script>
 
 
