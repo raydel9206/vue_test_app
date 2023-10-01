@@ -4,15 +4,21 @@ import LeftMenu from '@/components/webComponents/LeftMenu.vue';
 import RatingFour from '@/assets/icons/RatingFour.vue';
 import PointSeparator from '@/assets/icons/PointSeparator.vue';
 import isFavorite from '@/assets/icons/isFavorite.vue';
+import Favorite from '@/assets/icons/Favorite.vue';
 import IconView from '@/assets/icons/IconView.vue';
 import IconViewList from '@/assets/icons/IconViewList.vue';
 import IconCheck from '@/assets/icons/IconCheck.vue';
 import ArrowDown from '@/assets/icons/ArrowDown.vue';
 import ArrowBack from '@/assets/icons/ArrowBack.vue';
 import ArrowNextPage from '@/assets/icons/ArrowNextPage.vue';
-import { computed, onMounted } from 'vue';
+
+// Toast
+import { useToast } from 'vue-toastification';
+const toast = useToast();
+
 
 import { useProductsStore } from '@/store/products';
+import { computed, onMounted } from 'vue';
 const store = useProductsStore();
 
 const products = computed(() => {
@@ -22,6 +28,13 @@ const products = computed(() => {
 onMounted(() => {
     store.fetchProducts();
 });
+
+const addFav = async (evt, change) => {
+    const textMsg = !change ? 'Se añadió a favoritos': 'Se eliminó de favoritos'
+    await store.addFav(evt, !change);
+    toast.success(textMsg);
+}
+
 
 const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
 </script>
@@ -63,9 +76,9 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
                     </div>
                 </div>
                 <div v-if="products.length > 0" class="flex flex-col gap-2.5">
-                    <div v-for="(prod, index) in products" :key="index" 
+                    <div v-for="(prod, index) in products" :key="index"
                         class="flex flex-row ml-12 bg-white h-60 rounded-md shadow-sm border border-zinc-200 gap-2">
-                        <div @click="$router.push({ name: 'product_detail',  params: { id: prod.id }})"
+                        <div @click="$router.push({ name: 'product_detail', params: { id: prod.id } })"
                             class="cursor-pointer w-52 pl-3 pr-3 pt-3 pb-3.5 bg-white justify-center items-center inline-flex rounded-md ">
                             <img class="w-full h-44" :src=prod.img />
                         </div>
@@ -91,15 +104,17 @@ const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing']
                             <div class="flex flex-col">
                                 <div class="w-full text-neutral-600 text-base font-normal">{{ prod.description }} </div>
                                 <div class="text-primary text-base font-medium cursor-pointer"
-                                    @click="$router.push({ name: 'product_detail',  params: { id: prod.id }})">
+                                    @click="$router.push({ name: 'product_detail', params: { id: prod.id } })">
                                     View details
                                 </div>
                             </div>
                         </div>
                         <div class="w-[8%] pt-4 pr-4 flex justify-end">
-                            <div class="p-2 h-10 bg-white rounded-md shadow border border-zinc-200 inline-flex">
+                            <div class="p-2 h-10 bg-white rounded-md shadow border border-zinc-200 inline-flex cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                                @click="addFav(prod.id, prod.isFavorite)">
                                 <div class="relative flex-col justify-start items-start flex">
-                                    <isFavorite />
+                                    <isFavorite v-if="!prod.isFavorite" />
+                                    <Favorite v-else />
                                 </div>
                             </div>
                         </div>

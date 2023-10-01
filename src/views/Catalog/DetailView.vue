@@ -14,6 +14,10 @@ import Promotion from '../../assets/icons/Promotion.vue';
 import Check from '../../assets/icons/Check.vue';
 import { useRoute } from 'vue-router';
 
+// Toast
+import { useToast } from 'vue-toastification';
+const toast = useToast();
+
 const crumbs = ['Home', 'Clothings', 'Men’s wear', 'Summer clothing'];
 
 import { useProductsStore } from '@/store/products';
@@ -35,6 +39,13 @@ const currentProd = computed(() => {
     return store.currentProd;
 });
 
+const addFav = async (evt, change) => {
+    await store.addFav(evt, !change);
+    const textMsg = !change ? 'Se añadió a favoritos': 'Se eliminó de favoritos'
+    await store.addFav(evt, !change);
+    toast.success(textMsg);
+}
+
 onMounted(() => {
     store.fetchSuggestions();
     store.fetchRelateds();
@@ -42,7 +53,6 @@ onMounted(() => {
 });
 
 </script>
-
 <template>
     <div class="md:px-[10%] lg:px-[15%] sm:px-[2%] mb-8 ">
         <BreadCrumbs :crumbs="crumbs" />
@@ -85,7 +95,7 @@ onMounted(() => {
                             <div class="text-green-600 text-base font-normal">In stock</div>
                         </div>
                         <div class="w-96 text-zinc-900 text-xl font-semibold">
-                            {{currentProd.name}}
+                            {{ currentProd.name }}
                         </div>
                         <div class="flex flex-row items-center gap-2">
                             <div class="flex flex-row gap-1 items-center">
@@ -121,7 +131,7 @@ onMounted(() => {
                         </div>
                         <div class="flex flex-row mt-2 border-b border-zinc-200 pb-2">
                             <div class="w-1/2 text-gray-400 text-base font-normal ">Price: </div>
-                            <div class="w-full text-neutral-600 text-base font-normal ">{{currentProd.price}}</div>
+                            <div class="w-full text-neutral-600 text-base font-normal ">{{ currentProd.price }}</div>
                         </div>
                         <div class="flex flex-row mt-2 border-b border-zinc-200 pb-2">
                             <div class="flex flex-col w-full gap-2">
@@ -200,9 +210,10 @@ onMounted(() => {
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row items-center justify-center mt-8 gap-2">
+                    <div class="flex flex-row items-center justify-center mt-6 gap-2 cursor-pointer h-12" @click="addFav(currentProd.id, currentProd.isFavorite)">
                         <isFavorite />
-                        <div class="text-primary text-base font-medium">Save for later</div>
+                        <div v-if="!currentProd.isFavorite" class="text-primary text-base font-medium">Save for later</div>
+                        <div v-else class="text-primary text-base font-medium">Remove from favorites</div>
                     </div>
                 </div>
             </div>
@@ -296,24 +307,24 @@ onMounted(() => {
                     </div>
                     <div class="pl-4 flex flex-col my-6 gap-2">
                         <div class="flex flex-row">
-                            <Check/>
+                            <Check />
                             <div class="text-neutral-600 text-base font-normal ">
                                 Some great feature name here</div>
                         </div>
                         <div class="flex flex-row">
-                            <Check/>
+                            <Check />
                             <div class="text-neutral-600 text-base font-normal ">
                                 Lorem ipsum dolor sit amet, consectetur
                             </div>
                         </div>
                         <div class="flex flex-row">
-                            <Check/>
+                            <Check />
                             <div class="text-neutral-600 text-base font-normal ">
                                 Duis aute irure dolor in reprehenderit
                             </div>
                         </div>
                         <div class="flex flex-row">
-                            <Check/>
+                            <Check />
                             <div class="text-neutral-600 text-base font-normal ">
                                 Some great feature name here
                             </div>

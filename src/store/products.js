@@ -11,7 +11,7 @@ export const useProductsStore = defineStore('products', {
     }),
 
     getters: {
-        getUsers(state) {
+        getProducts(state) {
             return state.products
         },
         getSuggestions(state) {
@@ -58,11 +58,27 @@ export const useProductsStore = defineStore('products', {
                 console.log(error)
             }
         },
-        
+
         async fetchProdById(id) {
             try {
                 const data = await $axios.get(`/products?id=${id}`)
                 this.currentProd = data.data[0]
+            }
+            catch (error) {
+                alert(error)
+                console.log(error)
+            }
+        },
+
+        async addFav(id, change) {
+            try {
+                const data = await $axios.patch(`/products/${id}`, { isFavorite: change }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (this.currentProd) this.currentProd.isFavorite = change
+                this.fetchProducts();
             }
             catch (error) {
                 alert(error)
