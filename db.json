@@ -1,19 +1,155 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "img": "/img/prod_1.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "img": "/img/prod_2.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
+    },
+    {
+      "id": 3,
+      "img": "/img/prod_3.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
+    },
+    {
+      "id": 4,
+      "img": "/img/prod_4.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
+    },
+    {
+      "id": 5,
+      "img": "/img/prod_5.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
+    },
+    {
+      "id": 6,
+      "img": "/img/prod_6.png",
+      "name": "Canon Cmera EOS 2000, Black 10x zoom",
+      "price": "$998.00",
+      "old_price": "$1128.00",
+      "rating": "7.5",
+      "orders": 1,
+      "free_shipping": true,
+      "description": "Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+      "isFavorite": false
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "suggestions": [
+    {
+      "name": "Men Blazers Sets Elegant Formal",
+      "short_name": "Solid Backpack blue jeans large size",
+      "img": "/img/suggest_1.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Men Blazers Sets Elegant Formal",
+      "short_name": "T-shirts with multiple colors, for men",
+      "img": "/img/suggest_2.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Men Blazers Sets Elegant Formal",
+      "short_name": "T-shirts with multiple colors, for men",
+      "img": "/img/suggest_3.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Men Blazers Sets Elegant Formal",
+      "short_name": "T-shirts with multiple colors, for men",
+      "img": "/img/suggest_4.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Men Blazers Sets Elegant Formal",
+      "short_name": "T-shirts with multiple colors, for men",
+      "img": "/img/suggest_1.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    }
+  ],
+  "related": [
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/suggest_2.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/related_2.png",
+      "range": "$7.00 - $99.50",
+      "price": "$10.30"
+    },
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/related_3.png",
+      "range": "$7.00 - $99.50",
+      "short_name": "Solid Backpack blue jeans large size",
+      "price": "$10.30"
+    },
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/prod_1.png",
+      "range": "$7.00 - $99.50",
+      "short_name": "Solid Backpack blue jeans large size",
+      "price": "$10.30"
+    },
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/prod_6.png",
+      "range": "$7.00 - $99.50",
+      "short_name": "Solid Backpack blue jeans large size",
+      "price": "$10.30"
+    },
+    {
+      "name": "Xiaomi Redmi 8 Original",
+      "img": "/img/related_4.png",
+      "range": "$7.00 - $99.50",
+      "short_name": "Solid Backpack blue jeans large size",
+      "price": "$10.30"
+    }
+  ]
 }

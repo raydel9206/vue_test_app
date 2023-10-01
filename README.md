@@ -38,10 +38,25 @@ Install JSON Server
 npm install -g json-server
 ```
 
-Start JSON Server
+
+## Create a JSON database file
+
+After installing the JSON Server package, the next step is to create a JSON file that will serve as your local database. To do this, create a new file on your text editor ending in the extension .json. Also, to keep your project neatly separated from the JSON Server files, I recommend putting every file concerning JSON Server in a single folder.
+
+## Add data in JSON format
+Copy the contents of this project's db.json file to the file you just created.
+
+
+## Start JSON Server Local
+Run the following command in your console from the source path of the .json file.
 
 ```bash
 json-server --watch db.json
+```
+
+Start JSON Server Public
+
+```bash
 json-server --host 192.168.x.xxx db.json
 ```
 
