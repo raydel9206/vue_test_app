@@ -45,5 +45,6 @@ json-server --watch db.json
 json-server --host 192.168.x.xxx db.json
 ```
 
-Now if you go to [http://localhost:3000/posts/1](http://localhost:3000/posts/1), you'll get
+Now if you go to [http://localhost:3000/posts/1](http://localhost:3000/posts/1), you'll get .
+
 Now if you go to [http://192.168.x.xxx:3000/posts/1](http://192.168.x.xxx/posts/1), you'll get
