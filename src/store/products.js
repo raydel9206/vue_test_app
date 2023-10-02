@@ -72,11 +72,7 @@ export const useProductsStore = defineStore('products', {
 
         async addFav(id, change) {
             try {
-                const data = await $axios.patch(`/products/${id}`, { isFavorite: change }, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
+                const data = await $axios.patch(`/products/${id}`, { isFavorite: change });
                 console.log(data)
                 if (this.currentProd) this.currentProd.isFavorite = change
                 this.fetchProducts();
