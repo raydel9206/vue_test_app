@@ -58,35 +58,35 @@ const props = defineProps({
                 </div>
             </div>
             <div class="grid text-gray-400">
-                <div class="text-zinc-900 font-inter_medium">About</div>
+                <div class="text-zinc-900 font-medium">About</div>
                 <div class="cursor-pointer mt-2">About Us</div>
                 <div class="cursor-pointer">Find store</div>
                 <div class="cursor-pointer">Categories</div>
                 <div class="cursor-pointer">Blogs</div>
             </div>
             <div class="grid text-gray-400">
-                <div class="text-zinc-900 font-inter_medium">Partnership</div>
+                <div class="text-zinc-900 font-medium">Partnership</div>
                 <div class="cursor-pointer mt-2">About Us</div>
                 <div class="cursor-pointer">Find store</div>
                 <div class="cursor-pointer">Categories</div>
                 <div class="cursor-pointer">Blogs</div>
             </div>
             <div class="grid  text-gray-400">
-                <div class="text-zinc-900 font-inter_medium">Information</div>
+                <div class="text-zinc-900 font-medium">Information</div>
                 <div class="cursor-pointer mt-2">Help Center</div>
                 <div class="cursor-pointer">Money Refund</div>
                 <div class="cursor-pointer">Shipping</div>
                 <div class="cursor-pointer">Contact us</div>
             </div>
             <div class="grid  text-gray-400">
-                <div class="text-zinc-900 font-inter_medium">For users</div>
+                <div class="text-zinc-900 font-medium">For users</div>
                 <div class="cursor-pointer mt-2">Login</div>
                 <div class="cursor-pointer">Register</div>
                 <div class="cursor-pointer">Settings</div>
                 <div class="cursor-pointer">My Orders</div>
             </div>
             <div class="grid gap-y-2">
-                <div class="text-zinc-900 font-inter_medium">Get App</div>
+                <div class="text-zinc-900 font-medium">Get App</div>
                 <AppStore class="cursor-pointer" />
                 <PlayStore class="cursor-pointer" />
             </div>

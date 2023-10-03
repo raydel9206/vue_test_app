@@ -58,8 +58,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        inter_regular: ['Inter-Regular', 'normal'],
-        inter_medium: ['Inter-Medium', 'medium'],
+        normal: ['Inter-Regular', 'normal'],
+        medium: ['Inter-Medium', 'medium'],
       },
     },
   },
